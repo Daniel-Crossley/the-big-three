@@ -1,5 +1,6 @@
-from sys import argv
+a = input("a = ")
+b = input("b = ")
 
-script, a, b = argv
+print("Perform Swap:")
 
-print(b, a)
+print(f"a = {b}, b = {a}")
