@@ -1,6 +1,6 @@
-CFLAGS=-wall -g
+CFLAGS=-Wall -g
 
-all: ex17
+all: main
 
 clean:
-  rm -f ex17
+	rm -f main
