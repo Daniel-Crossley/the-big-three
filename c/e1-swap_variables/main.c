@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_DATA 512
 
@@ -8,13 +9,25 @@ int main(int argc, char *argv[]) {
     char b[MAX_DATA];  
 
     printf("a = ");
-    fgets(a, sizeof(a), stdin);
+    if (fgets(a, sizeof(a), stdin) == NULL) {
+        printf("Failed to read line.\n");
+        exit(1);
+    }
 
     printf("b = ");
-    fgets(b, sizeof(b), stdin);
+    if (fgets(b, sizeof(b), stdin) == NULL) {
+        printf("Failed to read line.\n");
+        exit(1);
+    }
 
     a[strcspn(a, "\n")] = 0;
     b[strcspn(b, "\n")] = 0;
+
+    if (!a[0] || !b[0]) {
+       printf("Please input something.\n");
+       exit(1);
+    }
+
 
     printf("Perform Swap:\n");
 

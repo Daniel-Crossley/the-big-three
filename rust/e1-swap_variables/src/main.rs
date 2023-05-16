@@ -19,6 +19,10 @@ fn main() {
 
     let a = a.trim();
     let b = b.trim();
+
+    if a.is_empty() || b.is_empty() {
+        panic!("Please input something.");
+    }
     
     println!("Perform Swap:");
 
