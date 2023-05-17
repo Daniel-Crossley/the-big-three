@@ -1,14 +1,15 @@
+import sys
+
 try:
     a = input("a = ")
+    if not a:
+        sys.exit()
     b = input("b = ")
+    if not b:
+        sys.exit()
 except:
-    print("Failed to read line.")
-    exit()
-
-if (not a) | (not b):
-    print("Please input something.")
-    exit()
-
+    sys.exit("Failed to read line.")
+    
 print("Perform Swap:")
 
 print(f"a = {b}, b = {a}")
