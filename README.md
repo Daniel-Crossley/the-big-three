@@ -1,2 +1,2 @@
-# the-big-three
-Simple CLI programs, using python, C, and Rust
+# the-suicide-six
+Simple CLI programs, using python, C, C++, Rust, Go, and Zig
